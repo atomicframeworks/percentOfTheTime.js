@@ -2,14 +2,12 @@
 
 ## Installation
 1. Include the source script in your html
-
 ```html
     <script src="/js/percentOfTheTime.min.js"></script>
 ```
 
 
 2. Initialize the percentOfTheTime module
-
 ```html
     <script>
         percentOfTheTime.init();
@@ -19,7 +17,7 @@
 
 ## Useage
 Call percentOfTheTime on a string and pass a callback function. <br>
-    Optionally an object containing true and false properties that are functions can passed instead.
+    Optionally an object containing true and false properties that are functions can passed instead.  (exaple 5.js)<br>
     The corresponding function will be executed depending on the random and cookie tests
 
 #### Example
