@@ -66,5 +66,5 @@ var defaults = {
 percentOfTheTime.config(defaults);
 ```
 
-### Destroy Method
-percentOfTheTime.destroy() - Reset the module config & remove percentOfTheTime from String.prototype
+### percentOfTheTime.destroy();
+Reset the module config & remove percentOfTheTime from String.prototype
