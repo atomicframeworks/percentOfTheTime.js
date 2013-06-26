@@ -1,11 +1,11 @@
 # percentOfTheTime.js</h1>
+Run a function a percent of the time. If the function executes store a cookie for 30 days (configurable) to prevent execution again.
 
 ## Installation
 1. Include the source script in your html
 ```html
     <script src="/js/percentOfTheTime.min.js"></script>
 ```
-
 
 2. Initialize the percentOfTheTime module
 ```html
@@ -14,9 +14,8 @@
     </script>
 ```
 
-
 ## Useage
-Call percentOfTheTime on a string and pass a callback function. <br>
+Call .percentOfTheTime(callbackObj) on a string and pass a callback function. <br>
     Optionally an object containing true and false properties that are functions can passed instead.  (exaple 5.js)<br>
     The corresponding function will be executed depending on the random and cookie tests
 
@@ -24,10 +23,12 @@ Call percentOfTheTime on a string and pass a callback function. <br>
 The example callback will run 10% of the time the function is run.
 Once the callback is run a cookie is stored so that it does not run again.
 
-```js
-'10'.percentOfTheTime(function{
-    console.log('Run 10%');
-});
+```html
+    <script>
+        '10'.percentOfTheTime(function{
+            console.log('Run 10%');
+        });
+    </script>
 ```
 
 
