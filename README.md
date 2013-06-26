@@ -39,8 +39,8 @@ Extends the String object with .percentOfTheTime() method.
 Sets options for the module
 ###### Arguments: <br>
         configObj - Object with properties to extends the module options variable
-#### Example - Set current defaults
-The example below shows config options and their defaults.  Running the code will set all options to defaults.  You can also reset to defaults by calling percentOfTheTime.destroy() and percentOfTheTime.init()  (example 4).
+#### Example - Set defaults
+The example below shows all config options and their defaults.  Running the code will set all options to defaults.  You can also reset to defaults by calling percentOfTheTime.destroy() and percentOfTheTime.init()  (example 4).
  
 ```js
 var defaults = {
@@ -61,4 +61,8 @@ percentOfTheTime.config(defaults);
 ```
 
 ### percentOfTheTime.destroy();
-Reset the module config & remove percentOfTheTime from String.prototype
+Reset the module config to defaults & remove percentOfTheTime from String.prototype
+
+## License 
+getParam.js is release under the MIT license \
+[www.opensource.org/licenses/MIT](www.opensource.org/licenses/MIT)
