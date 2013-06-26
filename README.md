@@ -36,13 +36,13 @@ Once the callback is run a cookie is stored so that it does not run again.
 ## Module Methods
 There are three methods for the percentOfTheTime variable- init(), config(), destroy().
 
-### percentOfTheTime.init(configObj)
-#### Extends the String object with .percentOfTheTime() method.
+### percentOfTheTime.init(configObj);
+Extends the String object with .percentOfTheTime() method.
 ###### Arguments: <br>
         configObj - (Optional) Extends the module options variable during init (example 2.js)
                 
-### percentOfTheTime.config(configObj)
-#### Sets options for the module
+### percentOfTheTime.config(configObj);
+Sets options for the module
 ###### Arguments: <br>
         configObj - Object with properties to extends the module options variable
 #### Example - Set current defaults
