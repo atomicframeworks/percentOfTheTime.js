@@ -12,7 +12,7 @@ Run a function a percent of the time. If the function executes store a cookie fo
 percentOfTheTime.init();
 ```
 
-## Useage
+## Usage
 Call .percentOfTheTime(callbackObj) on a string and pass a callback function. <br>
     Optionally an object containing true and false properties that are functions can passed instead.  (example 5.js)<br>
     The corresponding function will be executed depending on the random and cookie tests
