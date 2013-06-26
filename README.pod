@@ -1,0 +1,66 @@
+
+=begin html
+
+<h1>percentOfTheTime.js</h1>
+
+<h2>Installation:</h2>
+1. Include the source script on the page
+2. initialize the percentOfTheTime module
+
+<b>1)</b>
+<blockquote>
+<script src="/js/percentOfTheTime.min.js"></script>
+</blockquote>
+
+<b>2)</b>
+<blockquote>
+percentOfTheTime.init();
+</blockquote>
+<br>
+
+<h2>Useage</h2>
+Call percentOfTheTime with a callback on a string. <br>
+<br>
+The example callback will run 10% of the time the function is run. <br>
+After running it will store a cookie so that it does not run again.
+
+<blockquote>
+'10'.percentOfTheTime(function{
+    console.log('Run 10%');
+});
+</blockquote>
+
+<h2> Module Methods <h2>
+<br>
+<h3>Init Method:</h3>
+
+percentOfTheTime.init() - Extends the String object with a .percentOfTheTime() method.
+    Arguments   : <br>
+    <ul>
+        <li>
+        configObj - Extends the module options variable <br>
+        </li>
+    </ul>
+<br>
+<br>
+<h3>Config Method:</h3>
+
+percentOfTheTime.config(configObj) - Sets options for the module
+    Arguments   : <br>
+    <ul>
+        <li>
+        configObj - Object with properties to extends the module options variable
+        </li>
+    </ul>
+<br>
+<br>
+<h3>Destroy Method:</h3>
+
+percentOfTheTime.destroy() - Reset the module config & remove the percentOfTheTime from String.prototype
+
+
+
+
+
+
+=end html
