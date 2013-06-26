@@ -22,7 +22,7 @@ Call percentOfTheTime on a string and pass a callback function. <br>
     Optionally an object containing true and false properties that are functions can passed instead.
     The corresponding function will be executed depending on the random and cookie tests
 
-### Example
+#### Example
 The example callback will run 10% of the time the function is run.
 Once the callback is run a cookie is stored so that it does not run again.
 
@@ -34,17 +34,17 @@ Once the callback is run a cookie is stored so that it does not run again.
 
 
 ## Module Methods
-There are three methods for the percentOfTheTime variable
+There are three methods for the percentOfTheTime variable- init(), config(), destroy().
 
-### Init Method
+### percentOfTheTime.init(configObj)
 percentOfTheTime.init(configObj) - Extends the String object with a .percentOfTheTime() method. <br>
     Arguments: <br>
         configObj - (Optional) Extends the module options variable during init (example 2.js)<br>
         <br>
         
-### Config Method
-percentOfTheTime.config(configObj) - Sets options for the module <br>
-    Arguments: <br>
+### percentOfTheTime.config(configObj)
+#### Sets options for the module <br>
+###### Arguments: <br>
         configObj - Object with properties to extends the module options variable <br>
         Listed below are the defaults that you can change <br>
         <br>
