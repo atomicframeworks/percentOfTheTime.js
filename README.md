@@ -36,7 +36,7 @@ Pass an object containing key : value pairs to the percentOfTheTime module confi
 
 #### Example
 ```js
-percentOfTheTime.config({ cookieName: 'monthlyRoadBlock' });
+percentOfTheTime.config({ cookieName: 'monthlyRoadblock' });
 ```
 
 Configurable properties: <br>
