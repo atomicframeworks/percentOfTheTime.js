@@ -80,9 +80,6 @@ var percentOfTheTime = (function (){
                 options[key] = configObj[key];
             }
         }
-        if ( Number.prototype.percentOfTheTime ) {
-            init();
-        }
     };
     
     // Begin Public method /initModule/
