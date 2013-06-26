@@ -9,9 +9,14 @@
 
 <b>1)</b>
 <blockquote>
+
+
 ==end html
 <script src="/js/percentOfTheTime.min.js"></script>
+
+
 =begin html
+
 </blockquote>
 
 <b>2)</b>
