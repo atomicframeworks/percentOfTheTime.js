@@ -4,12 +4,14 @@
 <h1>percentOfTheTime.js</h1>
 
 <h2>Installation:</h2>
-1. Include the source script on the page
-2. initialize the percentOfTheTime module
+1. Include the source script on the page <br>
+2. initialize the percentOfTheTime module <br>
 
 <b>1)</b>
 <blockquote>
+==end html
 <script src="/js/percentOfTheTime.min.js"></script>
+=begin html
 </blockquote>
 
 <b>2)</b>
