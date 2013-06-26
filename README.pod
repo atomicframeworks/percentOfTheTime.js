@@ -8,17 +8,10 @@
 2. initialize the percentOfTheTime module <br>
 
 <b>1)</b>
-<blockquote>
-
-
-==end html
-<script src="/js/percentOfTheTime.min.js"></script>
-
-
-=begin html
-
-</blockquote>
-
+```html
+    <script src="/js/percentOfTheTime.min.js"></script>
+```
+<br>
 <b>2)</b>
 <blockquote>
 percentOfTheTime.init();
