@@ -10,7 +10,7 @@
         cookieName: '',
     });
 
-    '50'.percentOfTheTime({
+    (100 / 2).percentOfTheTime({
         true: function () {
             console.log('Example 5 - True - Heads');
         }, 

@@ -22,7 +22,7 @@
     //      true if the random & cookie checks pass
     //      false if either check fails
     
-    if ( '25'.percentOfTheTime() ){
+    if ( (25).percentOfTheTime() ){
         console.log('Example 4 - default config after destroying & reinitializing');
     }
     

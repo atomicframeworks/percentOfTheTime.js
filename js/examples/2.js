@@ -8,7 +8,7 @@
         expires: 5
     });
 
-    '25'.percentOfTheTime(function () {
+    (25).percentOfTheTime(function () {
        console.log('Example 2 - init & config'); 
     });
     

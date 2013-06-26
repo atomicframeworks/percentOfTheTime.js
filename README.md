@@ -1,16 +1,20 @@
 # percentOfTheTime.js</h1>
-Run a function a percent of the time. If the function executes store a cookie for 30 days (configurable) to prevent execution again.
+Run a function (n) percent of the time. If the function executes store a cookie called percentOfTheTime (configurable) for 30 days (configurable) to prevent execution again.  <br>
+If you do not plan to use the cookie feature you can download a version in the /js/cookieless directory.  This version has the cookie feature removed so it about 1kb smaller compared to the other version. The cookieless module is unconfigurable (because all configs are cookie related).
 
 ## Installation
-1. Include the source script in your html
+1. Include the source script in your html <br>
+This will create a percentOfTheTime variable that can be used to init, config, and destroy the module.
 ```html
 <script src="/js/percentOfTheTime.min.js"></script>
 ```
 
 2. Initialize the percentOfTheTime js module
+This will extend the Number class prototype with percentOfTheTime so we can call the method on any number.
 ```js
 percentOfTheTime.init();
 ```
+
 
 ## Usage
 Call .percentOfTheTime(callbackObj) on a string and pass a callback function. <br>
@@ -27,8 +31,25 @@ Once the callback is run a cookie is stored so that it does not run again.
 ```
 
 
-## Module Methods
-There are three methods for the percentOfTheTime variable- init(), config(), destroy().
+## Configuration
+Pass an object containing key : value pairs to the percentOfTheTime module config method.
+
+#### Example
+```js
+percentOfTheTime.config({ cookieName: 'monthlyRoadBlock' });
+```
+
+Configurable properties: <br>
+* cookieName: Name of the cookie to be store - string
+* cookieValue: The value of the store cookie - string or boolean
+* expires: Number of days to expire in or date to exoure if Date object - number or Date Object
+* path: The path for the cookie - string
+* domain: The domain for the cookie - string
+* secure: Should the cookie be secure (served only over https) - boolean
+
+
+## percentOfTheTime Module Methods
+There are three methods for the percentOfTheTime module variable- init(), config(), destroy().
 
 ### percentOfTheTime.init(configObj);
 Extends the String object with .percentOfTheTime() method.

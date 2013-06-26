@@ -4,7 +4,7 @@
 
     percentOfTheTime.init();
     
-    '25'.percentOfTheTime(function () {
+    (25).percentOfTheTime(function () {
        console.log('Example 1 - default'); 
     });
     
