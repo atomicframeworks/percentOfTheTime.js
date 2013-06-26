@@ -25,7 +25,7 @@ Call .percentOfTheTime(callbackObj) on a string and pass a callback function. <b
 The example callback will run 10% of the time the function is run.
 Once the callback is run a cookie is stored so that it does not run again.
 ```js
-'10'.percentOfTheTime(function() {
+(10).percentOfTheTime(function() {
     console.log('Run 10%');
 });
 ```

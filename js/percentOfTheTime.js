@@ -92,6 +92,7 @@ var percentOfTheTime = (function (){
     init = function ( configObj ) {
         
         if ( configObj ){
+            config(defaults);
             config(configObj);
         } else {
             config(defaults);
