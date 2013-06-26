@@ -10,7 +10,7 @@ Run a function a percent of the time. If the function executes store a cookie fo
 2. Initialize the percentOfTheTime module
 ```html
 <script>
-     percentOfTheTime.init();
+    percentOfTheTime.init();
 </script>
 ```
 
