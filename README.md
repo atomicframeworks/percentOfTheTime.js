@@ -1,6 +1,7 @@
 # percentOfTheTime.js
 Run a function (n) percent of the time. If the function executes store a cookie called percentOfTheTime (configurable) for 30 days (configurable) to prevent execution again. <br>
-When determining if the user is cookied, <em>only</em> the existance is checked. The value can be anything, but if the user has the cookie they are treated as cookied. <br> 
+<br>
+When determining if the user is cookied, <em>only the existance is checked</em>. The value can be anything, but if the user has the cookie they are treated as cookied. <br> 
 <br>
 If you do not plan to use the cookie feature or want to manage cookies yourself inside the callback you can download a cookieless version in the /js/cookieless directory.  This version has the cookie feature removed so it about 1kb smaller compared to the other version. The cookieless module is unconfigurable (because all configs are cookie related).
 
