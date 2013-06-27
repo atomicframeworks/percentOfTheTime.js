@@ -15,11 +15,11 @@
 var percentOfTheTime = (function (){
     var init, destroy;
     // Begin Public method /initModule/
-    // Purpose    : Extend the base String object with percentOfTheTime
+    // Purpose    : Extend the base Number object with percentOfTheTime
     init = function () {
-        // Begin String method /percentOfTheTime/        
+        // Begin Number prototype method /percentOfTheTime/        
         // Purpose : 
-        //      Extend strings to allow a callback to be called a percentage of the time
+        //      Extend Numbers to allow a callback to be called a percentage of the time
         // Arguments :
         //  * callbackObj - (optional) a function or object to be executed if the random passes
         //      * Optionally callbackObj can be an object (instead of a function) 

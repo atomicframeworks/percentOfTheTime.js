@@ -1,10 +1,12 @@
-# percentOfTheTime.js</h1>
-Run a function (n) percent of the time. If the function executes store a cookie called percentOfTheTime (configurable) for 30 days (configurable) to prevent execution again.  <br>
+# percentOfTheTime.js
+Run a function (n) percent of the time. If the function executes store a cookie called percentOfTheTime (configurable) for 30 days (configurable) to prevent execution again. <br>
+When determining if the user is cookied, <em>only</em> the existance is checked. The value can be anything, but if the user has the cookie they are treated as cookied. <br> 
+<br>
 If you do not plan to use the cookie feature you can download a version in the /js/cookieless directory.  This version has the cookie feature removed so it about 1kb smaller compared to the other version. The cookieless module is unconfigurable (because all configs are cookie related).
 
 ## Installation
 1. Include the source script in your html <br>
-This will create a percentOfTheTime variable that can be used to init, config, and destroy the module.
+This script will create a percentOfTheTime variable that can be used to init, config, and destroy the module.
 ```html
 <script src="/js/percentOfTheTime.min.js"></script>
 ```
@@ -17,7 +19,7 @@ percentOfTheTime.init();
 
 
 ## Usage
-Call .percentOfTheTime(callbackObj) on a string and pass a callback function. <br>
+Call .percentOfTheTime(callbackObj) on a Number and pass a callback function. <br>
     Optionally an object containing true and false properties that are functions can passed instead.  (example 5.js)<br>
     The corresponding function will be executed depending on the random and cookie tests
 
@@ -40,19 +42,19 @@ percentOfTheTime.config({ cookieName: 'monthlyRoadblock' });
 ```
 
 Configurable properties: <br>
-* cookieName: Name of the cookie to be store - string
-* cookieValue: The value of the store cookie - string or boolean
-* expires: Number of days to expire in or date to exoure if Date object - number or Date Object
-* path: The path for the cookie - string
-* domain: The domain for the cookie - string
-* secure: Should the cookie be secure (served only over https) - boolean
+* cookieName: Name of the cookie to be store - String, Number, or Boolean - ( converted toString() via concatenation )
+* cookieValue: The value of the store cookie - String, Number, or Boolean - ( converted toString() via concatenation )
+* expires: Number of days to expire in or date of expiration if Date object - Number or Date Object
+* path: The path for the cookie - String
+* domain: The domain for the cookie - String
+* secure: Should the cookie be secure (served only over https) - Boolean
 
 
 ## percentOfTheTime Module Methods
 There are three methods for the percentOfTheTime module variable- init(), config(), destroy().
 
 ### percentOfTheTime.init(configObj);
-Extends the String object with .percentOfTheTime() method.
+Extends the Number object with .percentOfTheTime() method.
 ###### Arguments: <br>
         configObj - (Optional) Extends the module options variable during init (example 2.js)
                 
@@ -82,7 +84,7 @@ percentOfTheTime.config(defaults);
 ```
 
 ### percentOfTheTime.destroy();
-Reset the module config to defaults & remove percentOfTheTime from String.prototype
+Reset the module config to defaults & remove percentOfTheTime from Number.prototype
 
 ## License 
 percentOfTheTime.js is release under the MIT license <br>

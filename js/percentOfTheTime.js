@@ -18,7 +18,7 @@ var percentOfTheTime = (function (){
     var defaults = {
             // Cookie name & value to set
             cookieName: 'percentOfTheTime',
-            cookieValue: true,
+            cookieValue: 1,
             // Days to expire
             expires: 30,
             // root default path
@@ -31,12 +31,20 @@ var percentOfTheTime = (function (){
         // Configurable option object
         options = {},
         // Utility methods
-        readCookie, setCookie,
+        checkCookie, setCookie, esc,
         // Public methods
         config, init, destroy;
     //----------------- END MODULE SCOPE VARIABLES ---------------
 
     //------------------- BEGIN UTIL METHODS -------------------
+    // Escape only characters not allowed in cookies ( the = is allowed in values but not name so pass it in optionally for a replace)
+    esc = function (string, equalsSign) {
+        if (equalsSign) {
+            string = string.replace(/\=/g, '%3D');
+        }        
+        return string.replace(/\s/g, '%20').replace(/;/g, '%3B').replace(/,/g, '%2C');
+    };
+    
     setCookie = function() {
         var date = new Date();
         if ( typeof options.expires === 'number') {
@@ -45,25 +53,20 @@ var percentOfTheTime = (function (){
         } else if ( options.expires instanceof Date ) {
             // If expires is a Date object - set to the object
             date = options.expires;
-        } else {
-            console.warn('Expires must be a number of days to expire or a Date object');
         }
         
         document.cookie = [
-            options.cookieName + '=' + options.cookieValue + '; expires=' + date.toUTCString() ,
+            esc(options.cookieName, 1) + '=' + esc(options.cookieValue),
+            options.expires ? '; expires=' + date.toUTCString() : '',
             options.domain ? '; domain=' + options.domain : '',
             options.path ? '; path=' + options.path : '',
             options.secure ? '; secure' : ''
         ].join('');        
     };
     
-    readCookie = function() {
-        var name = options.cookieName + '=', ca = document.cookie.split(/;\s*/), i;
-        for ( i = ca.length - 1; i >= 0; i--) {
-            if (ca[i].indexOf(name) !== -1) {
-                return ca[i].replace(name, '');
-            }
-        }
+    // Check for existance of cookie
+    checkCookie = function() {
+        return ( document.cookie.search( new RegExp( '(;\\s{0,1}|^)' + esc(options.cookieName, 1) + '=' , 'g') ) !== -1 );
     };
     //------------------- END UTIL METHODS -------------------
     
@@ -76,14 +79,14 @@ var percentOfTheTime = (function (){
     config = function( configObj ) {
         var key;             
         for (key in configObj) {
-            if ( defaults.hasOwnProperty(key) ) {                    
+            if ( configObj.hasOwnProperty(key) ) {                    
                 options[key] = configObj[key];
             }
         }
     };
     
     // Begin Public method /initModule/
-    // Purpose    : Extend the base String object with percentOfTheTime
+    // Purpose    : Extend the base Number object with percentOfTheTime
     // Arguments  :
     //      * configObj - Extends the module options variable
     init = function ( configObj ) {
@@ -95,9 +98,9 @@ var percentOfTheTime = (function (){
             config(defaults);
         }
         
-        // Begin String method /percentOfTheTime/        
+        // Begin Number prototype method /percentOfTheTime/        
         // Purpose : 
-        //      Extend strings to allow a callback to be called a percentage of the time
+        //      Extend Numbers to allow a callback to be called a percentage of the time
         // Arguments :
         //  * callbackObj - (optional) a function or object to be executed if the random passes
         //      * Optionally callbackObj can be an object (instead of a function) 
@@ -112,7 +115,7 @@ var percentOfTheTime = (function (){
             if ( this / 100 >= Math.random() ) {
                 
                 // If there is no cookie run true
-                if ( ! readCookie() || ! options.cookieName ) {
+                if ( ! checkCookie() || ! options.cookieName ) {
                     // If we have a cookie name set it 
                     if ( options.cookieName ) {
                         setCookie();
