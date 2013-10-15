@@ -88,5 +88,5 @@ percentOfTheTime.config(defaults);
 Reset the module config to defaults & remove percentOfTheTime from Number.prototype
 
 ## License 
-percentOfTheTime.js is release under the MIT license <br>
+percentOfTheTime.js is released under the MIT license <br>
 [www.opensource.org/licenses/MIT](www.opensource.org/licenses/MIT)
