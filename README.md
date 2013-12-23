@@ -18,6 +18,11 @@ This will extend the Number class prototype with percentOfTheTime so we can call
 percentOfTheTime.init();
 ```
 
+3. When you are done using the module call .destroy()<br>
+This will remove percentOfTheTime from Number.prototype and reset the module config to defaults. 
+```js
+percentOfTheTime.destroy();
+```
 
 ## Usage
 Call .percentOfTheTime(callbackObj) on a Number and pass a callback function. <br>
