@@ -12,7 +12,7 @@ This script will create a percentOfTheTime variable that can be used to init, co
 <script src="/js/percentOfTheTime.min.js"></script>
 ```
 
-2. Initialize the percentOfTheTime js module
+2. Initialize the percentOfTheTime js module by calling .init()<br>
 This will extend the Number class prototype with percentOfTheTime so we can call the method on any number.
 ```js
 percentOfTheTime.init();
